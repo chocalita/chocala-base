@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Chocala\\Base\\GlobalObjectResourcesTest::testRegister":4,"Chocala\\Base\\ObjectResourcesTest::test__construct":4},"times":{"Chocala\\Base\\GlobalObjectResourcesTest::testSingleton":0.011,"Chocala\\Base\\GlobalObjectResourcesTest::testRegister":0.011,"Chocala\\Base\\ObjectResourcesTest::test__construct":0.002}}
