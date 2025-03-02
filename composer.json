@@ -15,6 +15,11 @@
             "Chocala\\": "src/Chocala"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Chocala\\": "tests/Chocala"
+        }
+    },
     "authors": [
         {
             "name": "Yecid Rodriguez",
@@ -31,5 +36,8 @@
         "phpcs-auto-fix": "@phpcs-fix --standard=.phpcs.xml",
         "phpcs-auto-check-project": "phpcs --report=summary -p",
         "phpcs-auto-fix-project": "phpcbf --report=summary -p"
+    },
+    "config": {
+        "vendor-dir": "Vendor"
     }
 }
