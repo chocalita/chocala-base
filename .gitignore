@@ -1,0 +1,6 @@
+*.lock
+.idea/
+.idea/*
+Vendor/*
+!Vendor/composer/autoload_classmap.php
+/vendor/
