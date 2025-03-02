@@ -18,10 +18,10 @@
         </testsuite>
     </testsuites>
 
-    <coverage cacheDirectory=".phpunit.cache/code-coverage"
-              processUncoveredFiles="true">
-        <include>
-            <directory suffix=".php">src</directory>
-        </include>
-    </coverage>
+<!--    <coverage cacheDirectory=".phpunit.cache/code-coverage"-->
+<!--              processUncoveredFiles="true">-->
+<!--        <include>-->
+<!--            <directory suffix=".php">src</directory>-->
+<!--        </include>-->
+<!--    </coverage>-->
 </phpunit>

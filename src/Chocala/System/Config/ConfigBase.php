@@ -9,13 +9,13 @@ namespace Chocala\System\Config;
  */
 abstract class ConfigBase
 {
-    /** Access restrcted for superuser manager */
+    /** Access restricted for superuser manager */
     public const PRIVATE_ACCESS = 'PRIVATE';
 
-    /** Access restrcted for admin manager */
+    /** Access restricted for admin manager */
     public const PROTECTED_ACCESS = 'PROTECTED';
 
-    /** Access restrcted for more roles manager */
+    /** Access restricted for more roles manager */
     public const PUBLIC_ACCESS = 'PUBLIC';
 
     /**
@@ -46,7 +46,7 @@ abstract class ConfigBase
     /**
      * @return string
      */
-    public function getAccess()
+    public function getAccess(): ?string
     {
         return $this->access;
     }
@@ -55,7 +55,7 @@ abstract class ConfigBase
      * @param string $access
      * @return void
      */
-    public function setAccess($access)
+    public function setAccess($access): void
     {
         $this->access = $access;
     }
@@ -63,7 +63,7 @@ abstract class ConfigBase
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -72,7 +72,7 @@ abstract class ConfigBase
      * @param string $name
      * @return void
      */
-    public function setName($name)
+    public function setName($name): void
     {
         $this->name = $name;
     }
@@ -80,7 +80,7 @@ abstract class ConfigBase
     /**
      * @return string
      */
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -89,7 +89,7 @@ abstract class ConfigBase
      * @param string $value
      * @return void
      */
-    public function setValue($value)
+    public function setValue($value): void
     {
         $this->value = $value;
     }
@@ -97,7 +97,7 @@ abstract class ConfigBase
     /**
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -106,7 +106,7 @@ abstract class ConfigBase
      * @param string $description
      * @return void
      */
-    public function setDescription($description)
+    public function setDescription($description): void
     {
         $this->description = $description;
     }
@@ -130,7 +130,7 @@ abstract class ConfigBase
      * Return an enum whit level access of configurations
      * @return array
      */
-    public static function enumAccess()
+    public static function enumAccess(): array
     {
         return [
             self::PRIVATE_ACCESS => self::PRIVATE_ACCESS,

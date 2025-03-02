@@ -12,26 +12,25 @@ use Chocala\Base\IllegalArgumentException;
 class Parameter extends ConfigBase
 {
     /** Integer values accepted */
-    public const string TYPE_INTEGER = 'INTEGER';
+    public const TYPE_INTEGER = 'INTEGER';
 
     /** List of values accepted (Only by options)*/
-    public const string TYPE_LIST = 'LIST';
+    public const TYPE_LIST = 'LIST';
 
     /** Number values accepted */
-    public const string TYPE_NUMBER = 'NUMBER';
+    public const TYPE_NUMBER = 'NUMBER';
 
     /** Sequential list of values accepted (Only by options)*/
-    public const string TYPE_SEQUENTIAL = 'SEQUENTIAL';
+    public const TYPE_SEQUENTIAL = 'SEQUENTIAL';
 
     /** String values accepted */
-    public const string TYPE_STRING = 'STRING';
+    public const TYPE_STRING = 'STRING';
 
     /** Values 0/1 (On/Off) only accepted */
-    public const string TYPE_SWITCH = 'SWITCH';
+    public const TYPE_SWITCH = 'SWITCH';
 
     /**
-     *
-     * @var string
+     * @var string|null
      */
     protected ?string $type = null;
 

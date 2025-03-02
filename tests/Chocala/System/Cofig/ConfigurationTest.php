@@ -28,11 +28,11 @@ class ConfigurationTest extends TestCase
      */
     public function testOtherConstructors()
     {
-        $param = new Configuration('paramParent', 'TestValueParent', 'Test Description');
-        $this->assertEquals('paramParent', $param->getName());
-        $this->assertEquals('TestValueParent', $param->getValue());
-        $this->assertEquals('Test Description', $param->getDescription());
-        $this->assertEquals(Parameter::PRIVATE_ACCESS, $param->getAccess());
+        $config = new Configuration('paramParent', 'TestValueParent', 'Test Description');
+        $this->assertEquals('paramParent', $config->getName());
+        $this->assertEquals('TestValueParent', $config->getValue());
+        $this->assertEquals('Test Description', $config->getDescription());
+        $this->assertEquals(Parameter::PRIVATE_ACCESS, $config->getAccess());
     }
 
     /**
