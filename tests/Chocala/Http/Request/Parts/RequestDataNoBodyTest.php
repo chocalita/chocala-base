@@ -2,8 +2,6 @@
 
 namespace Chocala\Http\Request\Parts;
 
-require_once 'CustomRequestDataTest.php';
-
 use Chocala\Base\UnsupportedOperationException;
 
 class RequestDataNoBodyTest extends CustomRequestDataTest

@@ -13,10 +13,10 @@ class InputStream implements InputStreamInterface
 
     public function __construct()
     {
-        $get_arguments = func_get_args();
-        $number_of_arguments = func_num_args();
-        if (method_exists($this, $method_name = '__construct' . $number_of_arguments)) {
-            call_user_func_array([$this, $method_name], $get_arguments);
+        $getArguments = func_get_args();
+        $numberOfArguments = func_num_args();
+        if (method_exists($this, $methodName = '__construct' . $numberOfArguments)) {
+            call_user_func_array([$this, $methodName], $getArguments);
         } else {
             throw new InvalidArgumentException('Invalid number of arguments to create object ' . __CLASS__);
         }

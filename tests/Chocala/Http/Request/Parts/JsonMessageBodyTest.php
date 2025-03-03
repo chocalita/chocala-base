@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class JsonMessageBodyTest extends TestCase
 {
-    public function test__construct()
+    public function testConstruct()
     {
         $jsonMessageBody = new JsonMessageBody(null);
         self::assertIsObject($jsonMessageBody);

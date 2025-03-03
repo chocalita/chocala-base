@@ -34,7 +34,7 @@ class MappedRequestTest extends TestCase
         $this->fakeRoutesMapping = new FakeRoutesMapping();
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $mappedRequest = new MappedRequest($this->fakeRequest, $this->fakeRoutesMapping);
         self::assertNotEmpty($mappedRequest);

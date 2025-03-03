@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class TextHtmlBodyTest extends TestCase
 {
-    public function test__construct()
+    public function testConstruct()
     {
         $textHtmlBody = new TextHtmlBody(null);
         self::assertIsObject($textHtmlBody);

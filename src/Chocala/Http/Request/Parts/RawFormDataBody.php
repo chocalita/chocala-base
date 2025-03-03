@@ -40,7 +40,9 @@ class RawFormDataBody extends FormDataBody implements MessageBodyInterface
     private function parseData(string $contentTypeBoundary, string $rawData): array
     {
         if (preg_match('/^multipart\/form-data; boundary=.*$/ui', $contentTypeBoundary) !== 1) {
-            throw new IllegalArgumentException('Invalid multipart/form-data, Content-Type is not matching with the required.');
+            throw new IllegalArgumentException(
+                'Invalid multipart/form-data, Content-Type is not matching with the required.'
+            );
         }
         #Get boundary value
         $boundary = preg_replace('/(^multipart\/form-data; boundary=)(.*$)/ui', '$2', $contentTypeBoundary);
@@ -49,9 +51,19 @@ class RawFormDataBody extends FormDataBody implements MessageBodyInterface
             throw new IllegalArgumentException('Invalid multipart/form-data raw data');
         }
         #Strip ending boundary
-        $rawData = preg_replace('/(^\s*--' . $boundary . '.*)(\s*--' . $boundary . '--\s*$)/muis', '$1', trim($rawData));
+        $rawData = preg_replace(
+            '/(^\s*--' . $boundary . '.*)(\s*--' . $boundary . '--\s*$)/muis',
+            '$1',
+            trim($rawData)
+        );
         #Split data into array of fields
-        $rawData = preg_split('/\s*--' . $boundary . '\s*Content-Disposition: form-data;\s*/muis', $rawData, 0, PREG_SPLIT_NO_EMPTY);
+        $rawData =
+            preg_split(
+                '/\s*--' . $boundary . '\s*Content-Disposition: form-data;\s*/muis',
+                $rawData,
+                0,
+                PREG_SPLIT_NO_EMPTY
+            );
         #Convert to associative array
         $parsedData = [];
         foreach ($rawData as $field) {
@@ -73,7 +85,8 @@ class RawFormDataBody extends FormDataBody implements MessageBodyInterface
                 $array = json_decode($name, true);
                 #Check if we actually got an array and did not fail
                 if (!is_null($array)) {
-                    #"Merge" the array into existing data. Doing recursive replace, so that new fields will be added, and in case of duplicates, only the latest will be used
+                    #"Merge" the array into existing data. Doing recursive replace, so that new fields will be added,
+                    # and in case of duplicates, only the latest will be used
                     $parsedData = array_replace_recursive($parsedData, $array);
                 }
             } else {

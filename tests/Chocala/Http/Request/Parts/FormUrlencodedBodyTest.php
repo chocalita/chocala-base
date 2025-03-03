@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class FormUrlencodedBodyTest extends TestCase
 {
-    public function test__construct()
+    public function testConstruct()
     {
         $jsonMessageBody = new FormUrlencodedBody(null);
         self::assertIsObject($jsonMessageBody);

@@ -24,7 +24,7 @@ class HeadersTest extends TestCase
         $this->defaultHeaders = new Headers($this->defaultHeadersList);
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $headers = new Headers($this->defaultHeadersList);
         self::assertIsObject($headers);

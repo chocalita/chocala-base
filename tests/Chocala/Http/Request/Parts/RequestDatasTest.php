@@ -47,7 +47,7 @@ class RequestDatasTest extends TestCase
         );
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $object = new RequestDatas();
         self::assertNotNull($object);

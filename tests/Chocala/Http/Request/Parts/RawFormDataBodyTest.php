@@ -27,7 +27,7 @@ class RawFormDataBodyTest extends TestCase
         $this->rawData = FakeRawFormDataBody::rawData();
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $rawFormDataBody = new RawFormDataBody($this->contentType, $this->rawData);
         self::assertIsObject($rawFormDataBody);

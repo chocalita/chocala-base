@@ -15,7 +15,7 @@ class QueryParamsTest extends TestCase
         return new QueryParams();
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $queryParams = new QueryParams();
         self::assertIsObject($queryParams);

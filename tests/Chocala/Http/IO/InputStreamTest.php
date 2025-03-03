@@ -16,7 +16,7 @@ class InputStreamTest extends TestCase
         $this->fakeInputStream = new FakeInputStream(self::FAKE_CONTENT);
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $inputStream = new InputStream();
         self::assertIsObject($inputStream);

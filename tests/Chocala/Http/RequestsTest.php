@@ -51,7 +51,7 @@ class RequestsTest extends TestCase
         $this->requests = new Requests();
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $object = new Requests();
         self::assertNotNull($object);

@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class PostFormDataBodyTest extends TestCase
 {
-    public function test__construct()
+    public function testConstruct()
     {
         $postFormDataBody = new PostFormDataBody();
         self::assertIsObject($postFormDataBody);

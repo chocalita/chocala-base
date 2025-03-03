@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class MessageBodyTest extends TestCase
 {
-    public function test__construct()
+    public function testConstruct()
     {
         $messageBody = new MessageBody(ContentType::TEXT_PLAIN, 'message');
         self::assertIsObject($messageBody);

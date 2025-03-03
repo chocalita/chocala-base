@@ -43,7 +43,7 @@ class SafeMethodTest extends TestCase
         $this->defaultSafeMethod = new SafeMethod($this->baseRequest);
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $safeMethod = new SafeMethod($this->baseRequest);
         self::assertIsObject($safeMethod);

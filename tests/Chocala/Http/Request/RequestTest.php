@@ -37,7 +37,7 @@ class RequestTest extends TestCase
         $this->commonRequest = new Request($this->fakeRequestLine, $this->fakeHeaders, $this->fakeRequestData);
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $request = new Request($this->fakeRequestLine, $this->fakeHeaders, $this->fakeRequestData);
         self::assertNotNull($request);

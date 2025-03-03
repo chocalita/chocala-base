@@ -7,7 +7,7 @@ use Chocala\System\ContentType;
 
 class TextHtmlBody implements MessageBodyInterface
 {
-    const HTML_TAG_PATTERN = '#(?<=<)\w+(?=[^<]*?>)#';
+    private const HTML_TAG_PATTERN = '#(?<=<)\w+(?=[^<]*?>)#';
 
     /**
      * @var MessageBody

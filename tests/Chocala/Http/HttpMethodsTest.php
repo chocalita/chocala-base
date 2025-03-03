@@ -20,7 +20,7 @@ class HttpMethodsTest extends TestCase
         'TRACE'
     ];
 
-    public function test__construct()
+    public function testConstruct()
     {
         $object = new HttpMethods();
         self::assertNotNull($object);

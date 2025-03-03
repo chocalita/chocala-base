@@ -11,7 +11,6 @@ use InvalidArgumentException;
 
 class RequestDatas
 {
-
     public function __construct()
     {
     }
@@ -25,9 +24,11 @@ class RequestDatas
      * @throws IllegalArgumentException
      * @throws UnsupportedOperationException
      */
-    public function make(HttpMethodEnum       $httpMethod,
-                         RequestHeadersInterface $headers,
-                         QueryParamsInterface $queryParams) : RequestDataInterface
+    public function make(
+        HttpMethodEnum $httpMethod,
+        RequestHeadersInterface $headers,
+        QueryParamsInterface $queryParams
+    ) : RequestDataInterface
     {
         if ($httpMethod->isSafe()) {
             return new RequestDataNoBody($queryParams);
@@ -41,5 +42,4 @@ class RequestDatas
             return new RequestData($queryParams, $messageBody);
         }
     }
-
 }

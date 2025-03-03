@@ -22,7 +22,7 @@ class RequestLineTest extends TestCase
         );
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $requestLine = new RequestLine(HttpMethod::GET(), 'http://localhost/api/va', 'HTTP/1.1');
         self::assertIsObject($requestLine);

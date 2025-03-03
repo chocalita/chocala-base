@@ -13,8 +13,6 @@ use Chocala\Http\Request\Parts\Fakes\FakeRequestData;
 use Chocala\Http\Request\Parts\Fakes\FakeTextHtmlBody;
 use InvalidArgumentException;
 
-require_once 'CustomRequestDataTest.php';
-
 class RequestDataTest extends CustomRequestDataTest
 {
     private FakeRequestData $fakeRequestData;
@@ -65,7 +63,7 @@ class RequestDataTest extends CustomRequestDataTest
         return new RequestData(new FakeJsonMessageBody());
     }
 
-    public function test__construct()
+    public function testConstruct()
     {
         $requestData = new RequestData(new FakeMessageBody());
         self::assertIsObject($requestData);

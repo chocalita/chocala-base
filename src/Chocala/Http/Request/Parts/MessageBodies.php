@@ -11,7 +11,6 @@ use Chocala\System\ContentType;
 
 class MessageBodies
 {
-
     public function __construct()
     {
     }
@@ -25,12 +24,14 @@ class MessageBodies
      * @throws IllegalArgumentException
      * @throws UnsupportedOperationException
      */
-    public function make(HttpMethodEnum       $method,
-                         string               $contentType,
-                         InputStreamInterface $inputStream) : MessageBodyInterface
+    public function make(
+        HttpMethodEnum $method,
+        string $contentType,
+        InputStreamInterface $inputStream
+    ) : MessageBodyInterface
     {
         // TODO: chamge default for application/octet-stream and validate is content-disposition is form-data
-        if ( strpos($contentType, ContentType::MULTIPART_FORM_DATA) === 0 ) {
+        if (strpos($contentType, ContentType::MULTIPART_FORM_DATA) === 0) {
             if ($method->equals(HttpMethod::POST())) {
                 return new PostFormDataBody();
             } else {
@@ -49,14 +50,14 @@ class MessageBodies
             throw new UnsupportedOperationException(ContentType::MULTIPART_MIXED . ' is not supported yet');
         } elseif ($contentType == ContentType::MULTIPART_ALTERNATIVE) {
             throw new UnsupportedOperationException(ContentType::MULTIPART_ALTERNATIVE . ' is not supported yet');
-        } elseif ($contentType == ContentType::APPLICATION_BINARY ||
-            $contentType == ContentType::APPLICATION_OCTET_STREAM) {
-            throw new UnsupportedOperationException(ContentType::APPLICATION_OCTET_STREAM . ' is not supported yet');
+        } elseif ($contentType == ContentType::APPLICATION_BINARY || $contentType == ContentType::APPLICATION_OCTET_STREAM) {
+            throw new UnsupportedOperationException(
+                ContentType::APPLICATION_OCTET_STREAM . ' is not supported yet'
+            );
         } else {
             // 'application/x-www-form-urlencoded' This is the default content type
             $contentType = ContentType::APPLICATION_FORM_URLENCODED;
             return new FormUrlencodedBody($inputStream->content());
         }
     }
-
 }

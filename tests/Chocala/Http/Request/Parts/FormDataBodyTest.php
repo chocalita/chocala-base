@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class FormDataBodyTest extends TestCase
 {
-    public function test__construct()
+    public function testConstruct()
     {
         $formDataBody = new FakeFormDataBody();
         self::assertIsObject($formDataBody);
