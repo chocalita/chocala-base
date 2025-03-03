@@ -10,76 +10,76 @@ namespace Chocala\System;
 class ContentType
 {
     /* UTF-8 charset encode */
-    public const string CHARSET_UTF8 = 'UTF-8';
+    public const CHARSET_UTF8 = 'UTF-8';
 
     /* ISO-8859-1 charset encode */
-    public const string CHARSET_ISO88591 = 'ISO-8859-1';
+    public const CHARSET_ISO88591 = 'ISO-8859-1';
 
     /* Form urlencoded contents */
-    public const string APPLICATION_FORM_URLENCODED = 'application/x-www-form-urlencoded';
+    public const APPLICATION_FORM_URLENCODED = 'application/x-www-form-urlencoded';
 
     /* Javascript contents */
-    public const string APPLICATION_JAVASCRIPT = 'application/x-javascript';
+    public const APPLICATION_JAVASCRIPT = 'application/x-javascript';
 
     /* JSON contents */
-    public const string APPLICATION_JSON = 'application/json';
+    public const APPLICATION_JSON = 'application/json';
 
     /* It's just a non-standard way of restating "octet-stream" */
-    public const string APPLICATION_BINARY = 'application/binary';
+    public const APPLICATION_BINARY = 'application/binary';
 
     /* Strict type for binary date, include to downloads */
-    public const string APPLICATION_OCTET_STREAM = 'application/octet-stream';
+    public const APPLICATION_OCTET_STREAM = 'application/octet-stream';
 
     /* PDF documents */
-    public const string APPLICATION_PDF = 'application/pdf';
+    public const APPLICATION_PDF = 'application/pdf';
 
     /* Rich Text Format contents */
-    public const string APPLICATION_RTF = 'application/rtf';
+    public const APPLICATION_RTF = 'application/rtf';
 
     /* Shockwave Flash contents */
-    public const string APPLICATION_SWF = 'application/x-shockwave-flash';
+    public const APPLICATION_SWF = 'application/x-shockwave-flash';
 
     /* Extensible MarkUp Language contents */
-    public const string APPLICATION_XML = 'application/xml';
+    public const APPLICATION_XML = 'application/xml';
 
     /* ZIP files */
-    public const string APPLICATION_ZIP = 'application/zip';
+    public const APPLICATION_ZIP = 'application/zip';
 
     /* Alternative files and attachments */
-    public const string MULTIPART_ALTERNATIVE = 'multipart/alternative';
+    public const MULTIPART_ALTERNATIVE = 'multipart/alternative';
 
     /* Type for .au and .snd files */
-    public const string TYPE_AUDIO = 'audio/basic';
+    public const TYPE_AUDIO = 'audio/basic';
 
     /* Microsoft Excel files */
-    public const string TYPE_EXCEL = 'application/x-msexcel';
+    public const TYPE_EXCEL = 'application/x-msexcel';
 
     /* Form data contents */
-    public const string MULTIPART_FORM_DATA = 'multipart/form-data';
+    public const MULTIPART_FORM_DATA = 'multipart/form-data';
 
     /* Css content */
-    public const string TEXT_CSS = 'text/css';
+    public const TEXT_CSS = 'text/css';
 
     /* Enriched text */
     public const TEXT_ENRICHED = 'text/enriched';
 
     /* HiperText Markup Language contents */
-    public const string TEXT_HTML = 'text/html';
+    public const TEXT_HTML = 'text/html';
 
     /* Mixed files and attachments */
-    public const string MULTIPART_MIXED = 'multipart/mixed';
+    public const MULTIPART_MIXED = 'multipart/mixed';
 
     /* Rich Text files */
-    public const string TEXT_RICHTEXT = 'text/richtext';
+    public const TEXT_RICHTEXT = 'text/richtext';
 
     /* Normal and plain texts */
-    public const string TEXT_PLAIN = 'text/plain';
+    public const TEXT_PLAIN = 'text/plain';
 
     /* Wireless Application Protocol for movil devices apps */
-    public const string TYPE_WAP = 'text/vnd.wap.wml';
+    public const TYPE_WAP = 'text/vnd.wap.wml';
 
     /* Microsoft Word files */
-    public const string TYPE_WORD = 'application/x-msword';
+    public const TYPE_WORD = 'application/x-msword';
 
     public const CONTENT_TYPE_LIST = [
         self::TEXT_PLAIN,
