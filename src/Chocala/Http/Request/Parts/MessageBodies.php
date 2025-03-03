@@ -28,7 +28,7 @@ class MessageBodies
         HttpMethodEnum $method,
         string $contentType,
         InputStreamInterface $inputStream
-    ) : MessageBodyInterface
+    ): MessageBodyInterface
     {
         // TODO: chamge default for application/octet-stream and validate is content-disposition is form-data
         if (strpos($contentType, ContentType::MULTIPART_FORM_DATA) === 0) {
